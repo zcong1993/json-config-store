@@ -12,7 +12,8 @@
   ],
   "scripts": {
     "test": "npm run lint && jest",
-    "lint": "xo"
+    "lint": "xo",
+    "codecov": "codecov -t 03a01e0c-d03d-4e54-96a5-ac1d4ce33554"
   },
   "author": "zcong1993 <1005997919@qq.com>",
   "jest": {
@@ -22,6 +23,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "codecov": "^1.0.1",
     "del": "^2.2.2",
     "jest": "^18.1.0",
     "xo": "^0.17.1"

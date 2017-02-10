@@ -3,6 +3,7 @@
 ---
 
 [![Build Status](https://img.shields.io/circleci/project/zcong1993/json-config-store/master.svg?style=flat)](https://circleci.com/gh/zcong1993/json-config-store) [![npm version](https://badge.fury.io/js/json-config-store.svg)](https://badge.fury.io/js/json-config-store) [![npm](https://img.shields.io/npm/dm/json-config-store.svg)](https://www.npmjs.com/package/json-config-store)
+[![codecov](https://codecov.io/gh/zcong1993/json-config-store/branch/master/graph/badge.svg)](https://codecov.io/gh/zcong1993/json-config-store)
 
 > control your config with a json file
 
