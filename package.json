@@ -11,12 +11,14 @@
     "src"
   ],
   "scripts": {
-    "test": " jest  && npm run lint",
+    "test": "npm run lint && jest",
     "lint": "xo"
   },
   "author": "zcong1993 <1005997919@qq.com>",
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "license": "MIT",
   "devDependencies": {

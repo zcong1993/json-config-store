@@ -6,6 +6,17 @@ const mockConfig = require('./_mock')
 
 const cache = mockConfig
 
+describe('constructor', () => {
+  test('required cwd', () => {
+    expect(() => new JsonConfigStore()).toThrow('Config file path is required!')
+  })
+
+  test('default configName', () => {
+    const conf = new JsonConfigStore({cwd: __dirname})
+    expect(conf.path).toBe(path.resolve(__dirname, 'configstore.json'))
+  })
+})
+
 describe('config exists', () => {
   const conf = new JsonConfigStore({
     cwd: __dirname,
@@ -42,7 +53,7 @@ describe('config exists', () => {
     expect(conf.get('name')).toBe('jest')
     expect(conf.get('obj')).toBe('obj')
     expect(conf.get('arr')).toEqual(arr)
-    expect(conf.set(arr)).toThrow(TypeError)
+    expect(() => conf.set(true)).toThrow('Expected `key` to be of type `string` or `object`, got boolean')
   })
 
   test('has', () => {
